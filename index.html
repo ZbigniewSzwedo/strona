@@ -1,131 +1,57 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biuro Rachunkowe ProFin</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header {
-      background: #00539C;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #003B73;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: white;
-      padding: 15px 20px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background: #004b95;
-    }
-    section {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    footer {
-      background: #003B73;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    input, textarea {
-      padding: 10px;
-      margin-bottom: 10px;
-      font-size: 1rem;
-    }
-    button {
-      background-color: #00539C;
-      color: white;
-      border: none;
-      padding: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #003B73;
-    }
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
     <h1>Biuro Rachunkowe ProFin</h1>
-    <p>Profesjonalna obsługa księgowa dla firm i osób fizycznych</p>
+    <p>Twoje finanse w dobrych rękach</p>
   </header>
 
   <nav>
-    <a href="#onas">O nas</a>
-    <a href="#uslugi">Usługi</a>
-    <a href="#kontakt">Kontakt</a>
+    <ul>
+      <li><a href="#onas">O nas</a></li>
+      <li><a href="#uslugi">Usługi</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
   </nav>
 
-  <section id="onas">
-    <h2>O nas</h2>
-    <p>
-      Biuro Rachunkowe ProFin oferuje kompleksowe usługi księgowe od ponad 10 lat. Naszym celem jest wspieranie przedsiębiorców w prowadzeniu działalności zgodnie z obowiązującym prawem i w sposób maksymalnie efektywny.
-    </p>
-  </section>
+  <main>
+    <section id="onas">
+      <h2>O nas</h2>
+      <p>Od 2010 roku pomagamy przedsiębiorcom prowadzić księgowość w sposób prosty i przejrzysty.</p>
+    </section>
 
-  <section id="uslugi">
-    <h2>Nasze usługi</h2>
-    <ul>
-      <li>Prowadzenie ksiąg rachunkowych</li>
-      <li>Księga przychodów i rozchodów (KPiR)</li>
-      <li>Rozliczenia ZUS i PIT</li>
-      <li>Obsługa kadr i płac</li>
-      <li>Wsparcie przy zakładaniu działalności</li>
-    </ul>
-  </section>
+    <section id="uslugi">
+      <h2>Nasze usługi</h2>
+      <div class="cards">
+        <div class="card"><h3>Księgowość pełna</h3><p>Pełna obsługa finansowa i rachunkowa.</p></div>
+        <div class="card"><h3>KPiR</h3><p>Księga przychodów i rozchodów dla mniejszych firm.</p></div>
+        <div class="card"><h3>ZUS i PIT</h3><p>Obsługa deklaracji podatkowych i składek.</p></div>
+      </div>
+    </section>
 
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Imię i nazwisko" required />
-      <input type="email" name="email" placeholder="Adres e-mail" required />
-      <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
-      <button type="submit">Wyślij</button>
-    </form>
-    <p id="formStatus"></p>
-  </section>
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Imię i nazwisko" required />
+        <input type="email" name="email" placeholder="Adres e-mail" required />
+        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+        <button type="submit">Wyślij</button>
+        <p id="status"></p>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Biuro Rachunkowe ProFin. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2025 Biuro Rachunkowe ProFin</p>
   </footer>
 
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      document.getElementById("formStatus").textContent = "Dziękujemy za wiadomość! Skontaktujemy się wkrótce.";
-      this.reset();
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
